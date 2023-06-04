@@ -1,0 +1,31 @@
+﻿@using YummyEf.Entities
+@{
+    Layout = "_SecondLayout";
+
+}
+@model Testimonial
+
+<div class="container">
+    <input type="checkbox" id="switch">
+    <div class="outer">
+        <div class="content">
+            <label for="switch">
+                <span class="toggle">
+                    <span class="circle"></span>
+                </span>
+            </label>
+            <div class="image-box">
+                <img src="~/assets/img/testimonials/@Model.Image" alt="">
+            </div>
+            <div class="details">
+                <div class="name">@Model.Firstname @Model.Lastname</div>
+                <div class="job">@Model.Professionss.Name</div>
+                <div class="buttons">
+                    <p>@Model.About</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@using YummyEf.Entities
+@{
+    Layout = "_SecondLayout";
+
+}
+@model Chef
+
+<div class="container">
+    <input type="checkbox" id="switch">
+    <div class="outer">
+        <div class="content">
+            <label for="switch">
+                <span class="toggle">
+                    <span class="circle"></span>
+                </span>
+            </label>
+            <div class="image-box">
+                <img src="~/assets/img/chefs/@Model.Image" alt="">
+            </div>
+            <div class="details">
+                <div class="name">@Model.Name</div>
+                <div class="job">@Model.Profession.Name</div>
+                <div class="buttons">
+                    <p>Lorem dolor sit amet, consectetur adipisicing elit. Ab officiis, harum minus aliquam atque aliquid enim commodi accusantium ut maiores dolorum nulla?</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="media-icons">
+                <a href="@Model.ChefSocialMedia.FbUrl"> <i class="fab fa-facebook-f"></i></a>
+                <a href="@Model.ChefSocialMedia.TwitterUrl"><i class="fab fa-twitter"></i> </a>
+                <a href="@Model.ChefSocialMedia.LnUrl">  <i class="fab fa-linkedin-in"></i> </a>
+                <a href="@Model.ChefSocialMedia.IgUrl"><i class="fab fa-instagram"></i></a>
+
+            </div>
+        </div>
+    </div>
+</div>
